@@ -53,7 +53,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Theme and Look
-THEME = 'simple'  # '../pppelican/theme'
+THEME = '../patternspandemic-theme'
 TYPOGRIFY = True
 
 
