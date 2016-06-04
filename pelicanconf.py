@@ -6,9 +6,16 @@ AUTHOR = 'Brad J. Christensen'
 SITENAME = 'patternspandemic'
 SITEURL = ''
 
+# Metadata
+DEFAULT_METADATA = {
+    'author': AUTHOR,
+    'status': 'draft'
+}
+
 # Paths
 PATH = 'content'
 STATIC_PATHS = ['images', 'extras']
+SLUG_SUBSTITUTIONS = [(' ', '-')]
 
 # URLs
 RELATIVE_URLS = True
@@ -20,10 +27,14 @@ DRAFT_URL = 'patterns/{slug}.html'
 DRAFT_SAVE_AS = 'patterns/{slug}.html'
 TAG_URL = 'tags/{slug}/'
 TAG_SAVE_AS = 'tags/{slug}/index.html'
+TAGS_SAVE_AS = 'tags/index.html'
 ARCHIVES_SAVE_AS = 'archives/index.html'
 YEAR_ARCHIVE_SAVE_AS = '{date:%Y}/index.html'
 MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
+DAY_ARCHIVE_SAVE_AS = ''  # Prevent generation of day archives
+CATEGORIES_SAVE_AS = ''  # Prevent generation of categories pages
 CATEGORY_SAVE_AS = ''  # Prevent generation of category pages
+AUTHORS_SAVE_AS = ''  # Prevent generation of authors pages
 AUTHOR_SAVE_AS = ''  # Prevent generation of author pages
 
 # Template Business
@@ -62,7 +73,10 @@ TYPOGRIFY = True
 GITHUB_URL = 'https://github.com/patternspandemic/'
 
 # Menu Links
-MENUITEMS = [('Title', 'http://some.link.here')]
+MENUITEMS = [
+    ('Menu Item', 'http://some.link.here'),
+    ('Another Item', 'http://some.link.here'),
+]
 
 # Header Links
 LINKS = (('Pelican', 'http://getpelican.com/'),
@@ -74,3 +88,6 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
+# Output
+OUTPUT_RETENTION = ['.git']
+#OUTPUT_PATH = '../patternspandemic.github.io/'

@@ -1,0 +1,12 @@
+#############################
+Pattern Lost or Not Yet Found
+#############################
+
+:save_as: 404.html
+:status: hidden
+
+*****
+ 404
+*****
+
+Pattern Lost or Not Yet Found
