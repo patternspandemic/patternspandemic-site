@@ -21,18 +21,20 @@ SLUG_SUBSTITUTIONS = [(' ', '-')]
 
 # URLs
 RELATIVE_URLS = True
-ARTICLE_URL = '{date:%Y}/{date:%m}/{slug}/'
-ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{slug}/index.html'
+ARTICLE_URL = '{date:%Y}/{date:%-m}/{slug}/'
+ARTICLE_SAVE_AS = '{date:%Y}/{date:%-m}/{slug}/index.html'
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 DRAFT_URL = 'patterns/{slug}.html'
 DRAFT_SAVE_AS = 'patterns/{slug}.html'
 TAG_URL = 'tags/{slug}/'
 TAG_SAVE_AS = 'tags/{slug}/index.html'
+TAGS_URL = 'tags/'
 TAGS_SAVE_AS = 'tags/index.html'
+ARCHIVES_URL = 'archives/'
 ARCHIVES_SAVE_AS = 'archives/index.html'
-YEAR_ARCHIVE_SAVE_AS = '{date:%Y}/index.html'
-MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
+YEAR_ARCHIVE_SAVE_AS = ''  # Prevent generation of year archives '{date:%Y}/index.html'
+MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%-m}/index.html'
 DAY_ARCHIVE_SAVE_AS = ''  # Prevent generation of day archives
 CATEGORIES_SAVE_AS = ''  # Prevent generation of categories pages
 CATEGORY_SAVE_AS = ''  # Prevent generation of category pages
@@ -76,8 +78,8 @@ GITHUB_URL = 'https://github.com/patternspandemic/'
 
 # Menu Links
 MENUITEMS = [
-    ('Menu Item', 'http://some.link.here'),
-    ('Another Item', 'http://some.link.here'),
+    ('archives', SITEURL + '/' + ARCHIVES_URL),
+    ('tags', SITEURL + '/' + TAGS_URL),
 ]
 
 # Header Links
