@@ -5,6 +5,8 @@ from __future__ import unicode_literals
 AUTHOR = 'Brad J. Christensen'
 SITENAME = 'patternspandemic'
 SITEURL = ''
+SITESUBTITLE = None
+SITESUBURL = ''
 
 # Metadata
 DEFAULT_METADATA = {
@@ -54,7 +56,7 @@ PYGMENTS_RST_OPTIONS = {'classprefix': 'pgcss', 'linenos': 'table'}
 # Dates, Times, Locales and Lang
 TIMEZONE = 'America/Phoenix'
 DEFAULT_LANG = 'en'
-DEFAULT_DATE_FORMAT = '%d %B %Y'
+DEFAULT_DATE_FORMAT = '%B %-d, %Y'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -65,7 +67,7 @@ AUTHOR_FEED_RSS = None
 
 # Theme and Look
 THEME = '../patternspandemic-theme'
-TYPOGRIFY = True
+TYPOGRIFY = False
 
 
 # Other Theme specific Stuff, change as needed.
