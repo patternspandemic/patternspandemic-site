@@ -33,7 +33,7 @@ TAGS_URL = 'tags/'
 TAGS_SAVE_AS = 'tags/index.html'
 ARCHIVES_URL = 'archives/'
 ARCHIVES_SAVE_AS = 'archives/index.html'
-YEAR_ARCHIVE_SAVE_AS = ''  # Prevent generation of year archives '{date:%Y}/index.html'
+YEAR_ARCHIVE_SAVE_AS = ''  # Prevent generation of year archives
 MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%-m}/index.html'
 DAY_ARCHIVE_SAVE_AS = ''  # Prevent generation of day archives
 CATEGORIES_SAVE_AS = ''  # Prevent generation of categories pages
@@ -94,4 +94,4 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 # Output
 OUTPUT_RETENTION = ['.git']
-#OUTPUT_PATH = '../patternspandemic.github.io/'
+# OUTPUT_PATH = '../patternspandemic.github.io/'

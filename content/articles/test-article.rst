@@ -6,6 +6,7 @@ I Wrote A Test Article
 :modified: 2016-06-03
 :status: published
 :tags: Test, Fluff
+:key_image: /images/ClassicalBlackHole.jpg
 :summary:
     This is just an article I created to test things. It's really just a bunch
     or reST bits to learn how that works, and to populate an article with
@@ -131,3 +132,4 @@ Anyway, Things I've Yet To Try
 - reST Directives
 - reST Substitutions (like inline directives)
 - reST Comments
+- include reST Directive
