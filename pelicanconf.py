@@ -74,6 +74,10 @@ AUTHOR_FEED_RSS = None
 THEME = '../patternspandemic-theme'
 TYPOGRIFY = False
 
+# Output
+OUTPUT_RETENTION = ['.git']
+# OUTPUT_PATH = '../patternspandemic.github.io/'
+
 
 # Other Theme specific Stuff, change as needed.
 
@@ -91,17 +95,19 @@ GITHUB_URL = 'https://github.com/patternspandemic/'
 TWITTER_URL = 'https://twitter.com/pttrnspndmc'
 TELEGRAM_URL = 'https://telegram.me/patternspandemic'
 
+SOCIALITEMS = [  # url, class, font-awesome
+    (GITHUB_URL, 'github', 'github-alt'),
+    (TWITTER_URL, 'twitter', 'twitter'),
+    (TELEGRAM_URL, 'telegram', 'paper-plane')
+]
+
 # Menu Links
 MENUITEMS = [
     ('archives', SITEURL + '/' + ARCHIVES_URL),
     ('tags', SITEURL + '/' + TAGS_URL),
 ]
 
-# Project Links
-PROJECTS = (('Ultibot', '#'),
-            ('AssistON', '#'),
-            ('Flohx', '#'),)
-
-# Output
-OUTPUT_RETENTION = ['.git']
-# OUTPUT_PATH = '../patternspandemic.github.io/'
+# Project Links (name, link, desc, img)
+PROJECTS = (('Ultibot', '#', ''),
+            ('AssistON', '#', ''),
+            ('Flohx', '#', ''))
