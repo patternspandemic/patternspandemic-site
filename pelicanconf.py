@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+from datetime import datetime
+from pytz import timezone
 
-AUTHOR = 'Brad J. Christensen'
+AUTHOR = 'Brad Christensen'
 SITENAME = 'patternspandemic'
 SITEURL = ''
 SITESUBTITLE = None
@@ -45,8 +47,8 @@ AUTHOR_SAVE_AS = ''  # Prevent generation of author pages
 DIRECT_TEMPLATES = ['index', 'archives', 'tags']
 USE_FOLDER_AS_CATEGORY = False
 DISPLAY_CATEGORIES_ON_MENU = False
-DEFAULT_PAGINATION = 7
-DEFAULT_ORPHANS = 3
+DEFAULT_PAGINATION = 2
+# DEFAULT_ORPHANS = 0
 PAGINATION_PATTERNS = (
     (1, '{base_name}/', '{base_name}/index.html'),
     (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
@@ -59,6 +61,7 @@ PYGMENTS_RST_OPTIONS = {'classprefix': 'pgcss', 'linenos': 'table'}
 TIMEZONE = 'America/Phoenix'
 DEFAULT_LANG = 'en'
 DEFAULT_DATE_FORMAT = '%B %-d, %Y'
+BUILD_DATETIME = datetime.now(tz=timezone(TIMEZONE))
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -74,7 +77,19 @@ TYPOGRIFY = False
 
 # Other Theme specific Stuff, change as needed.
 
+ABOUT = [
+    "I'm Brad Christensen, a technical artist and developer who has found "
+    "interest in the intersection of interactive agents, flow-based "
+    "programming, computer graphics, and animation.",
+
+    "Some of my favorite things are the Delaunay / Voronoi dual graph, the "
+    "sport of Ultimate, and classical guitar."
+]
+
+# Social Links
 GITHUB_URL = 'https://github.com/patternspandemic/'
+TWITTER_URL = 'https://twitter.com/pttrnspndmc'
+TELEGRAM_URL = 'https://telegram.me/patternspandemic'
 
 # Menu Links
 MENUITEMS = [
@@ -82,15 +97,10 @@ MENUITEMS = [
     ('tags', SITEURL + '/' + TAGS_URL),
 ]
 
-# Header Links
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
-
-# Social Links
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+# Project Links
+PROJECTS = (('Ultibot', '#'),
+            ('AssistON', '#'),
+            ('Flohx', '#'),)
 
 # Output
 OUTPUT_RETENTION = ['.git']
